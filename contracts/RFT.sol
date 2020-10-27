@@ -50,7 +50,7 @@ contract RFT is ERC20 {
         _mint(msg.sender, shareQty);
     }
 
-    function withdrawProfits() external {
+    function withdrawIcoProfits() external {
         require(msg.sender == admin, 'only Admin');
         require(block.timestamp > icoEnd, 'ICO not finished yet');
         uint daiBalance = dai.balanceOf(address(this));
